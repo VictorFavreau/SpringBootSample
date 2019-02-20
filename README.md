@@ -1,6 +1,6 @@
-# Project Title
+# SpringBoot sample project
 
-One Paragraph of project description goes here
+Sample project with SpringBoot and Docker
 
 ## Getting Started
 
@@ -46,7 +46,7 @@ Building the Docker container:
 Starting the Docker container
 * docker run -p 8080:8080 -t <DOCKER_PROFILE>/api-meal
 
-###Deploy the container on your DockerHub
+### Deploy the container on your DockerHub
 
 * docker push <DOCKER_PROFILE>/api-meal
 ## Built With
