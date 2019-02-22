@@ -21,7 +21,7 @@ public class Profile {
     @Column(name = "login")
     private String login;
 
-    @Column(name = "password")
+    @Column(name = "email")
     private String email;
 
 	public UUID getUuid() {
