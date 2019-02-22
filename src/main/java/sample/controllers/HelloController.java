@@ -1,16 +1,17 @@
 package sample.controllers;
 
-import sample.dto.HelloDto;
-import sample.service.HelloService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping(value = "/")
+import sample.dto.HelloDto;
+import sample.service.HelloService;
+import sample.utils.Result;
+
+@RestController
+@RequestMapping("/")
 public class HelloController {
 
     @Autowired
@@ -18,8 +19,8 @@ public class HelloController {
 
     @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public HelloDto sayHello() {
-        return helloService.sayHello();
+    public Result<HelloDto> sayHello() {
+        return Result.createSuccess(helloService.sayHello());
     }
 
 }

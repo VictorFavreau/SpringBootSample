@@ -1,5 +1,5 @@
 package sample.dao;
 
-public interface HelloDao extends Dao<Object> {
+public interface HelloDao {
     String getHelloMessage();
 }

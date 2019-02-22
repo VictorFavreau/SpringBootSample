@@ -1,7 +1,6 @@
 package sample.controllers;
 
-import sample.dto.HelloDto;
-import sample.utils.Constants;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import sample.dto.HelloDto;
+import sample.service.HelloService;
+import sample.utils.Constants;
 
 @RunWith(SpringRunner.class)
 @ActiveProfiles("test")
@@ -18,11 +19,11 @@ import static org.junit.Assert.*;
 public class HelloControllerTest {
 
     @Autowired
-    HelloController helloController;
+    HelloService helloService;
 
     @Test
     public void sayHello() throws Exception {
-        HelloDto hDto = helloController.sayHello();
+        HelloDto hDto = helloService.sayHello();
         assertEquals(Constants.HELLO_MESSAGE, hDto.getMessage());
     }
 
