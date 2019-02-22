@@ -18,9 +18,9 @@ Please edit .properties file for a DB connection in src/main/resources
 
 ### Request available:
 
-* / : show an hello message
+* / : show hello message
 * /profile : get all Profiles in DB
-* /profile/getRandom : create a random profile
+* /profile/getRandom : create random profile
 * /profile/getArmy?size=X : create X random profile (X default value = 10)
 
 ## Without Docker
