@@ -12,6 +12,17 @@ These instructions will get you a copy of the project up and running on your loc
 * Maven 3.6.X
 * Docker 2.0.X
 
+### Configure DataBase connection
+
+Please edit .properties file for a DB connection in src/main/resources
+
+### Request available:
+
+/ : show an hello message
+/profile : get all Profiles in DB
+/profile/getRandom : create a random profile
+/profile/getArmy?size=X : create X random profile (X default value = 10)
+
 ## Without Docker
 
 ### Installing
@@ -44,7 +55,7 @@ Building the Docker container:
 ### Running the application
 
 Starting the Docker container
-* docker run -p 8080:8080 -t <DOCKER_PROFILE>/api-meal
+* docker run -p 8080:8080 1664:1664 -t <DOCKER_PROFILE>/api-meal
 
 ### Deploy the container on your DockerHub
 
